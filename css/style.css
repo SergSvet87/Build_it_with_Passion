@@ -439,7 +439,7 @@ input[type="number"] {
   letter-spacing: 0.02em;
   color: #3b3b3b;
 }
-.footer__mobile{
+.footer__mobile {
   display: none;
 }
 /* Footer конец */
@@ -514,7 +514,7 @@ input[type="number"] {
 
 @media screen and (max-width: 394px) {
   .container {
-   width: 390px;
+    width: 393px;
   }
   .logo {
     margin: 0 -15px;
@@ -538,7 +538,7 @@ input[type="number"] {
     cursor: pointer;
   }
   .menu__burger::after {
-    content: '';
+    content: "";
     width: 30px;
     height: 3px;
     background-color: #000;
@@ -546,20 +546,22 @@ input[type="number"] {
     top: -10px;
   }
   .menu__burger::before {
-    content: '';
+    content: "";
     width: 30px;
     height: 3px;
     background-color: #000;
     position: absolute;
     bottom: -10px;
   }
-  .header__title{
+  .header__title {
     margin-top: 70px;
     font-size: 25px;
   }
-  .header__text{
-    width: 350px;
-    font-size: 12px;
+  .header__text {
+    font-size: 16px;
+  }
+  .header__button {
+    margin-bottom: 100px;
   }
   .about {
     padding-top: 70px;
@@ -567,7 +569,7 @@ input[type="number"] {
     font-size: 20px;
   }
   .about__item {
-    width: 200px;
+    width: 320px;
   }
   .team {
     height: auto;
@@ -585,19 +587,15 @@ input[type="number"] {
     width: 340px;
     margin: 0 0px 20px;
   }
-  .contact__icon-box{
+  .contact__icon-box {
     display: flex;
     flex-direction: column;
   }
-  .contact__form{
-    width: 300px;
+  .contact__item {
+    margin-bottom: 20px;
   }
-  .footer__desktop{
-    display: none;
-  }
-  .footer__mobile{
-    display: block;
-    height: auto;
+  .contact__form {
+    width: 320px;
   }
 }
 @media screen and (max-width: 281px) {
