@@ -14,7 +14,7 @@
     <header class="header">
       <div class="container">
         <!-- Навигационное меню начало -->
-        <nav>
+        <nav class="menu__desktop">
           <ul class="menu">
             <li class="menu__item active">
               <a href="#">Home</a>
@@ -42,6 +42,33 @@
           </ul>
         </nav>
         <!-- Навигационное меню конец -->
+
+        <nav class="menu__mobile">
+          <a href="#">
+            <img class="logo" src="img/logo.png" alt="logo" />
+          </a>
+          <div class="menu__burger"></div>
+          <ul class="menu">
+            <li class="menu__item active">
+              <a href="#">Home</a>
+            </li>
+            <li class="menu__item">
+              <a href="#"> About Us </a>
+            </li>
+            <li class="menu__item">
+              <a href="#">Team</a>
+            </li>
+            <li class="menu__item">
+              <a href="#">Services</a>
+            </li>
+            <li class="menu__item">
+              <a href="#">Blog</a>
+            </li>
+            <li class="menu__item">
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
 
         <!-- Заголовок и описание начало -->
         <div class="header__content">
@@ -289,8 +316,11 @@
     <!-- Footer start -->
     <footer class="footer">
       <div class="container">
-        <div class="footer__text">
+        <div class="footer__text footer__desktop">
           Copyright &copy; Kenan Hamidic. All rights reserved.
+        </div>
+        <div class="footer__text footer__mobile">
+          Copyright &copy; Kenan Hamidic. <br> All rights reserved.
         </div>
       </div>
     </footer>
