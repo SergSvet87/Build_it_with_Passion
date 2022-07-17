@@ -524,34 +524,74 @@ input[type="number"] {
   }
   .menu__mobile {
     display: flex;
+    flex-direction: column;
+  }
+  .menu__inner {
+    display: flex;
     justify-content: space-between;
     align-items: center;
   }
   .menu {
     display: none;
+    text-align: center;
+  }
+  .menu li{    
+    padding: 10px 0;
+  }
+  .menu a{
+    margin: 0;
   }
   .menu__burger {
-    width: 30px;
-    height: 3px;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 0;
     background-color: #000;
+    border-radius: 5px;
     position: relative;
     cursor: pointer;
   }
-  .menu__burger::after {
-    content: "";
-    width: 30px;
-    height: 3px;
-    background-color: #000;
+  .menu__burger span{
+    display: block;
     position: absolute;
+    background-color: #fff;
+    height: 4px;
+    width: 30px;
+    top: 18px;
+    left: 5px;
+    right: 5px;
+    transition: background 0s 0.3s;
+  }
+  .menu__burger span::after,
+  .menu__burger span::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+  }
+  .menu__burger span::after {    
     top: -10px;
   }
-  .menu__burger::before {
-    content: "";
-    width: 30px;
-    height: 3px;
-    background-color: #000;
-    position: absolute;
+  .menu__burger span::before {    
     bottom: -10px;
+  }
+  .menu__burger.close span{
+    background: none;
+  }
+  .menu__burger.close span::after {    
+    top: 0px;
+    transform: rotate(45deg);
+  }
+  .menu__burger.close span::before {    
+    bottom: 0px;
+    transform: rotate(-45deg);
   }
   .header__title {
     margin-top: 70px;
