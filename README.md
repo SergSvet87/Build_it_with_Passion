@@ -14,3 +14,4 @@
 1. [Макет на Marsy](https://www.markupeasy.ru/app/edit/197437)
 2. [Fontello](https://fontello.com/)
 3. [WordPress](https://ru.wordpress.org/download/)
+4. [jQuery](https://jquery.com/)
