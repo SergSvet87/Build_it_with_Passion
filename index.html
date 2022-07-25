@@ -14,16 +14,16 @@
     <header class="header">
       <div class="container">
         <!-- Навигационное меню начало -->
-        <nav>
+        <nav class="menu__desktop">
           <ul class="menu">
             <li class="menu__item active">
               <a href="#">Home</a>
             </li>
             <li class="menu__item">
-              <a href="#"> About Us </a>
+              <a href="#about"> About Us </a>
             </li>
             <li class="menu__item">
-              <a href="#">Team</a>
+              <a href="#team">Team</a>
             </li>
             <li class="menu__item">
               <a href="#">
@@ -31,13 +31,44 @@
               </a>
             </li>
             <li class="menu__item">
-              <a href="#">Services</a>
+              <a href="#provide">Services</a>
             </li>
             <li class="menu__item">
               <a href="#">Blog</a>
             </li>
             <li class="menu__item">
-              <a href="#">Contact Us</a>
+              <a href="#contact">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Навигация для мобильной версии -->
+        <nav class="menu__mobile">
+          <div class="menu__inner">
+            <a href="#">
+              <img class="logo" src="img/logo.png" alt="logo" />
+            </a>
+            <div class="menu__burger"><span>toggle menu</span></div>
+          </div>
+          
+          <ul class="menu">
+            <li class="menu__item active">
+              <a href="#">Home</a>
+            </li>
+            <li class="menu__item">
+              <a href="#about"> About Us </a>
+            </li>
+            <li class="menu__item">
+              <a href="#team">Team</a>
+            </li>
+            <li class="menu__item">
+              <a href="#provide">Services</a>
+            </li>
+            <li class="menu__item">
+              <a href="#">Blog</a>
+            </li>
+            <li class="menu__item">
+              <a href="#contact">Contact Us</a>
             </li>
           </ul>
         </nav>
@@ -59,7 +90,7 @@
     <!-- Основной контент начало -->
     <main>
       <!-- Блок О нас начало -->
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <!-- Список достижений по годам -->
           <div class="about__inner">
@@ -106,7 +137,7 @@
       <!-- Блок О нас конец -->
 
       <!-- Блок Команда начало -->
-      <section class="team">
+      <section class="team" id="team">
         <div class="container">
           <div class="block__head">
             <h2 class="block__title">This is our team</h2>
@@ -176,7 +207,7 @@
       <!-- Блок Команда конец -->
 
       <!-- Блок Услуги начало -->
-      <section class="provide">
+      <section class="provide" id="provide">
         <div class="container">
           <div class="block__head dark">
             <h2 class="block__title">We provide you everything</h2>
@@ -222,7 +253,7 @@
       <!-- Блок Услуги конец -->
 
       <!-- Блок Контакты начало -->
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="container">
           <div class="block__head">
             <h2 class="block__title">Contac Us</h2>
@@ -287,7 +318,7 @@
     <!-- Основной контент конец -->
 
     <!-- Footer start -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="container">
         <div class="footer__text">
           Copyright &copy; Kenan Hamidic. All rights reserved.
@@ -295,6 +326,7 @@
       </div>
     </footer>
     <!-- Footer end -->
-    
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>

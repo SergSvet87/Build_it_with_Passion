@@ -33,14 +33,6 @@
   src: url(../fonts/Roboto-Regular.ttf) format("truetype");
 }
 
-/* font-family: "HelveticaNeueLTProLt", sans-serif;
-font-family: "HelveticaNeueLTProMd", sans-serif;
-font-family: "HelveticaNeueLTProRoman", sans-serif;
-font-family: "Merriweather-LightItalic", sans-serif;
-font-family: "Montserrat-Light", sans-serif;
-font-family: "Montserrat-Regular", sans-serif;
-font-family: "Roboto-Regular", sans-serif; */
-
 * {
   box-sizing: border-box;
 }
@@ -64,6 +56,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.menu__mobile {
+  display: none;
 }
 
 .menu__item a {
@@ -443,6 +439,9 @@ input[type="number"] {
   letter-spacing: 0.02em;
   color: #3b3b3b;
 }
+.footer__mobile {
+  display: none;
+}
 /* Footer конец */
 
 /* media */
@@ -450,17 +449,17 @@ input[type="number"] {
   .container {
     width: 820px;
   }
-  .header__title{
+  .header__title {
     margin-top: 130px;
   }
-  .header__button{
+  .header__button {
     margin-bottom: 150px;
   }
   .about {
     height: auto;
     padding-bottom: 200px;
   }
-  .about__item{
+  .about__item {
     width: 460px;
   }
   .about__inner {
@@ -473,22 +472,22 @@ input[type="number"] {
   .dark .block__title {
     padding-top: 100px;
   }
-  .provide__inner{
+  .provide__inner {
     padding-top: 100px;
   }
   .provide__item {
     max-width: 250px;
   }
-  .provide__item i{
+  .provide__item i {
     height: 130px;
     width: 130px;
     font-size: 50px;
   }
-  .contact__form{
+  .contact__form {
     max-width: 700px;
     padding-top: 70px;
   }
-  .footer{
+  .footer {
     padding-top: 50px;
   }
 }
@@ -497,14 +496,14 @@ input[type="number"] {
   .container {
     width: 768px;
   }
-  .provide{
+  .provide {
     padding-bottom: 100px;
   }
-  .provide__inner{
+  .provide__inner {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .provide__item{
+  .provide__item {
     max-width: 300px;
     margin: 0 30px 40px;
   }
@@ -517,23 +516,126 @@ input[type="number"] {
   .container {
     width: 393px;
   }
+  .logo {
+    margin: 0 -15px;
+  }
+  .menu__desktop {
+    display: none;
+  }
+  .menu__mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu {
+    display: none;
+    text-align: center;
+  }
+  .menu li{    
+    padding: 10px 0;
+  }
+  .menu a{
+    margin: 0;
+  }
+  .menu__burger {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+    background-color: #000;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+  }
+  .menu__burger span{
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    height: 4px;
+    width: 30px;
+    top: 18px;
+    left: 5px;
+    right: 5px;
+    transition: background 0s 0.3s;
+  }
+  .menu__burger span::after,
+  .menu__burger span::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+  }
+  .menu__burger span::after {    
+    top: -10px;
+  }
+  .menu__burger span::before {    
+    bottom: -10px;
+  }
+  .menu__burger.close span{
+    background: none;
+  }
+  .menu__burger.close span::after {    
+    top: 0px;
+    transform: rotate(45deg);
+  }
+  .menu__burger.close span::before {    
+    bottom: 0px;
+    transform: rotate(-45deg);
+  }
+  .header__title {
+    margin-top: 70px;
+    font-size: 25px;
+  }
+  .header__text {
+    font-size: 16px;
+  }
+  .header__button {
+    margin-bottom: 100px;
+  }
   .about {
     padding-top: 70px;
     padding-bottom: 170px;
+    font-size: 20px;
   }
-  .about__item{
-    width: 300px;
+  .about__item {
+    width: 320px;
   }
-  .team{
+  .team {
     height: auto;
   }
-  .team__inner{
+  .team__inner {
     flex-direction: column;
     justify-content: center;
     padding-top: 70px;
   }
-  .team__item{
+  .team__item {
     margin-bottom: 30px;
+    width: 340px;
+  }
+  .provide__item {
+    width: 340px;
+    margin: 0 0px 20px;
+  }
+  .contact__icon-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact__item {
+    margin-bottom: 20px;
+  }
+  .contact__form {
+    width: 320px;
   }
 }
 @media screen and (max-width: 281px) {
@@ -544,7 +646,7 @@ input[type="number"] {
     padding-top: 50px;
     padding-bottom: 120px;
   }
-  .about__item{
+  .about__item {
     width: 250px;
   }
 }
